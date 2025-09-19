@@ -1,0 +1,34 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+.venv/
+env/
+venv/
+
+# Ignore data folders
+Data/
+Processed_train/
+Processed_test/
+
+# Ignore models
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# Ignore images and large files
+*.jpg
+*.jpeg
+*.png
+*.csv
+*.mp4
+*.avi
+
+# VSCode settings
+.vscode/
+
+
