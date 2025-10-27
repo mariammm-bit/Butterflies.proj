@@ -1,0 +1,104 @@
+🦋 Butterfly Image Classification with Transfer Learning
+
+This project implements a butterfly image classifier using TensorFlow/Keras and MobileNetV2 as a transfer learning backbone.
+The model is trained to classify butterfly images into different species or categories.
+The following preprocessing transformations are used as data augmentation techniques during training:
+
+blurred
+
+normalized
+
+├── requirements.txt          # Python dependencies
+└── README                    # Project documentation
+rotated
+
+scaled
+
+Clone the repository
+
+git clone https://github.com/<username>/<repository-name>.git
+cd <repository-name>
+
+
+Create and activate virtual environment
+
+python -m venv .venv
+.\.venv\Scripts\activate   # On Windows
+source .venv/bin/activate  # On Linux/Mac
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+🏋️ Training
+
+The model uses MobileNetV2 as a frozen base, with additional dense layers for classification.
+
+To train the model:
+
+python Notebooks/train_model.py
+
+📊 Evaluation
+
+To evaluate the trained model on the test dataset:
+
+python Notebooks/evaluate_model.py
+
+
+You will get:
+
+Test accuracy
+
+Loss
+
+Classification report
+
+Confusion matrix
+
+🎨 User Interface
+
+A simple Streamlit UI is provided for testing the model interactively.
+
+Run the app with:
+
+streamlit run app.py
+
+
+Then open http://localhost:8501
+ in your browser.
+
+💾 Model Saving
+
+The trained model is saved as:
+
+butterfly_classifier_mobilenet.h5
+
+
+⚠️ Large model files are ignored in git. You can save models in .keras format instead for better support:
+
+model.save("butterfly_classifier.keras")
+
+✅ Features
+
+Data augmentation (flip, rotate, zoom)
+
+Transfer learning with MobileNetV2
+
+Training, validation, and test splits
+
+Model evaluation (accuracy, confusion matrix, classification report)
+
+Interactive UI for predictions
+
+📌 Future Improvements
+
+Deploy app on Streamlit Cloud / Heroku
+
+Add more butterfly species classes
+
+Experiment with fine-tuning MobileNetV2 or other architectures
+
+🖊️ Author
+
+Developed by Mariam Gomaa ✨
